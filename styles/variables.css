@@ -2,3 +2,17 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
+/*Цвета текстов*/
+:root {
+  --header-text-color: #DB00FF;
+  /*Тень текста header не изменяется*/
+  --chapter-text-color: #FF0070;
+  --accent-text-color: #000028;
+  --main-text-color: #F1B2CE;
+  --background-accent-text-color: #FF0070;
+  --text-size: 18px;
+  --main-font: "IBM Plex mono", sans-serif;
+  --main-weight:  normal;
+  --accent-weight: bold;
+}

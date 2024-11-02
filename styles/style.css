@@ -2,4 +2,115 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  font-family: var(--main-font);
+  background-image: url(../images/cover-image-dark.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.head__decoration {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: var(--chapter-text-color);
+  font-size: 18px;
+}
+
+.decoration__point {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  block-size: 25px;
+  inline-size: 25px;
+  border-block-start: 1px solid var(--chapter-text-color);
+  border-inline-end: 1px solid var(--chapter-text-color);
+}
+
+.decoration__point::after {
+  content: "";
+  block-size: 9px;
+  inline-size: 9px;
+  background-color: var(--chapter-text-color);
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--chapter-text-color);
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+  outline: 1px solid var(--chapter-text-color);
+}
+
+.header {
+  display: grid;
+  position: relative;
+  grid-template-rows: auto repeat(3, 1fr);
+  align-items: center;
+  min-block-size: 657px;
+  padding: 0px 10px 0 10px;
+}
+
+.header__theme-menu {
+  justify-self: end;
+  padding-top: 20px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  text-transform: lowercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-family: inherit;
+  font-weight: var(--main-weight);
+  color: var(--chapter-text-color);
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+  min-inline-size: 70px;
+  min-block-size: 26px;
+} 
+
+.text__header {
+  display: block;
+  font-weight: var(--accent-weight);
+  color: var(--header-text-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  text-shadow: 4px 4px 0 var(--chapter-text-color);
+  line-height: 95.7px;
+}
+
+@media (min-width: 768px){
+  .text__header {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
+  }
+}
+
+.about__header {
+  font-size: 18px;
+  position: relative;
+  font-weight: var(--accent-weight);
+  color: var(--accent-text-color);
+  background-color: var(--background-accent-text-color);
+  background-clip: content-box;
+  font-size: var(--text-size);
+  line-height: 23.4px;
+}
+
+.about__header::after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 31px);
+  block-size: 25px;
+  inline-size: 25px;
+  border-inline-start: 1px solid var(--chapter-text-color);
+  border-block-end: 1px solid var(--chapter-text-color);
 }
