@@ -3,7 +3,7 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   font-family: var(--main-font);
-  background-image: url(../images/cover-image-dark.png);
+  background-image: var(--background-image);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -12,10 +12,14 @@
 .head__decoration {
   display: flex;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: var(--header-padding);
+  right: var(--header-padding);
   color: var(--chapter-text-color);
   font-size: 18px;
+}
+
+.decoration__rec {
+  visibility: var(--rec-visible);
 }
 
 .decoration__point {
@@ -36,6 +40,7 @@
   background-color: var(--chapter-text-color);
   border-radius: 50%;
   box-shadow: 0 0 4px 2px var(--chapter-text-color);
+  visibility: var(--rec-visible);
 }
 
 .header__theme-menu-button_active {
@@ -46,21 +51,31 @@
 .header {
   display: grid;
   position: relative;
-  grid-template-rows: auto repeat(3, 1fr);
+  grid-template-rows: var(--grid-rows);
   align-items: center;
-  min-block-size: 657px;
-  padding: 0px 10px 0 10px;
+  min-block-size: var(--min-header-height);
 }
 
 .header__theme-menu {
   justify-self: end;
-  padding-top: 20px;
+  padding: 20px var(--header-padding) 0 var(--header-padding);
 }
 
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+@media(min-width: 1024px) {
+  .header__theme-menu {
+    justify-self: center;
+    align-self: start;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
 }
 
 .header__theme-menu-button {
@@ -83,32 +98,35 @@
   display: block;
   font-weight: var(--accent-weight);
   color: var(--header-text-color);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  text-shadow: 4px 4px 0 var(--chapter-text-color);
+  font-size: var(--header-text-size);
+  text-shadow: 4px 4px 0 #FF0070;
   line-height: 95.7px;
 }
 
-@media (min-width: 768px){
+@media (max-width: 376px) {
   .text__header {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
+    padding-left: 10px;
   }
 }
 
 .about__header {
   font-size: 18px;
-  position: relative;
+  padding: 0 var(--header-padding) var(--header-padding) var(--header-padding);
   font-weight: var(--accent-weight);
   color: var(--accent-text-color);
   background-color: var(--background-accent-text-color);
   background-clip: content-box;
   font-size: var(--text-size);
   line-height: 23.4px;
+  justify-self: end;
+  inline-size: var(--about-width);
 }
 
-.about__header::after {
+.header::after {
   content: "";
   position: absolute;
-  top: calc(100% + 31px);
+  bottom: var(--header-padding);
+  left: var(--header-padding);
   block-size: 25px;
   inline-size: 25px;
   border-inline-start: 1px solid var(--chapter-text-color);
