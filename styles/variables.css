@@ -2,44 +2,57 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
-
-/*Цвета текстов*/
 :root {
-  --header-text-color: #DB00FF;
-  /*Тень текста header не изменяется*/
-  --chapter-text-color: #FF0070;
+  --shadow-header-footer: #ff0070;
+
+  --header-text-color: #db00ff;
+  --chapter-text-color: #ff0070;
   --accent-text-color: #000028;
-  --main-text-color: #F1B2CE;
-  --background-accent-text-color: #FF0070;
+  --main-text-color: #f1b2ce;
+  --background-accent-text-color: #ff0070;
+
   --text-size: 18px;
-  --main-font: "IBM Plex mono", sans-serif;
-  --main-weight:  normal;
+  --main-font: 'IBM Plex mono', sans-serif;
+  --main-weight: normal;
   --accent-weight: bold;
+
   --background-image: url(../images/cover-image-dark.png);
+
   --rec-visible: inherit;
   --header-text-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  --min-header-height: 668px;
-  --header-padding: 10px;
+  --page-padding: 10px;
   --about-width: 100%;
-  --grid-rows:auto 238px 192px 238px;
+  --grid-rows: auto 238px 192px 238px;
+  --content-padding: 50px;
+  --header-footer-block-end: 40px;
+  --line-height: 23.4px;
+  --decoration-corner-size: 25px;
+  --decoration-border: 1px solid var(--chapter-text-color);
+  --large-gap: 20px;
+  --mini-gap: 10px;
+  --footer-block-size: 668px;
 }
 
 @media (min-width: 768px) {
   :root {
     --header-text-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    --min-header-height: 1024px;
-    --header-padding: 20px;
-    --about-width: calc(50% + var(--header-padding));
-    --grid-rows:auto 462px 99px 462px;
+    --page-padding: 20px;
+    --about-width: calc(50% + var(--page-padding));
+    --grid-rows: auto 462px 99px 462px;
+    --content-padding: 80px;
+    --header-footer-block-end: 60px;
+    --footer-block-size: 1024px;
   }
 }
 
 @media (min-width: 1024px) {
   :root {
     --header-text-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    --min-header-height: 757px;
-    --header-padding: 20px;
-    --about-width: calc(50% + var(--header-padding));
-    --grid-rows:auto 319px 130px 319px;
+    --page-padding: 20px;
+    --about-width: calc(50% + var(--page-padding));
+    --grid-rows: auto 319px 130px 319px;
+    --content-padding: 80px;
+    --header-footer-block-end: 60px;
+    --footer-block-size: 768px;
   }
 }
