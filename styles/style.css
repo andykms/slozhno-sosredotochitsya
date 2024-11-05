@@ -135,7 +135,6 @@
   color: var(--accent-text-color);
   background-color: var(--background-accent-text-color);
   background-clip: content-box;
-  font-size: var(--text-size);
   line-height: 23.4px;
   justify-self: end;
   inline-size: var(--about-width);
@@ -148,8 +147,8 @@
   left: var(--page-padding);
   block-size: var(--decoration-corner-size);
   inline-size: var(--decoration-corner-size);
-  border-inline-start: var(--decoration-border);
-  border-block-end: var(--decoration-border);
+  border-inline-start: 1px solid var(--chapter-text-color);
+  border-block-end: 1px solid var(--chapter-text-color);
 }
 
 .content {
@@ -334,13 +333,13 @@
 .footer::before {
   inset-block-start: var(--page-padding);
   inset-inline-end: var(--page-padding);
-  border-inline-end: var(--decoration-border);
-  border-block-start: var(--decoration-border);
+  border-inline-end: 1px solid var(--chapter-text-color);
+  border-block-start: 1px solid var(--chapter-text-color);
 }
 
 .text__footer::after {
   inset-block-end: var(--page-padding);
   inset-inline-start: var(--page-padding);
-  border-inline-start: var(--decoration-border);
-  border-block-end: var(--decoration-border);
+  border-inline-start: 1px solid var(--chapter-text-color);
+  border-block-end: 1px solid var(--chapter-text-color);
 }

@@ -29,7 +29,6 @@
   :root {
     /* Дублируем переменные светлой темы */
     --header-text-color: #ffc2e6;
-    /*Тень текста header не изменяется*/
     --chapter-text-color: #353430;
     --accent-text-color: #353430;
     --main-text-color: #353430;

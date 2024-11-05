@@ -4,20 +4,16 @@
 */
 :root {
   --shadow-header-footer: #ff0070;
-
   --header-text-color: #db00ff;
   --chapter-text-color: #ff0070;
   --accent-text-color: #000028;
   --main-text-color: #f1b2ce;
   --background-accent-text-color: #ff0070;
-
   --text-size: 18px;
   --main-font: 'IBM Plex mono', sans-serif;
   --main-weight: normal;
   --accent-weight: bold;
-
   --background-image: url(../images/cover-image-dark.png);
-
   --rec-visible: inherit;
   --header-text-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --page-padding: 10px;
@@ -27,7 +23,6 @@
   --header-footer-block-end: 40px;
   --line-height: 23.4px;
   --decoration-corner-size: 25px;
-  --decoration-border: 1px solid var(--chapter-text-color);
   --large-gap: 20px;
   --mini-gap: 10px;
   --footer-block-size: 668px;
