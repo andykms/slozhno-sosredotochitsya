@@ -4,14 +4,14 @@
   переключая тему
 */
 
-.page .theme__dark {
+.page .theme_dark {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
 }
 
-:root .theme__dark {
+:root .theme_dark {
   /* Дублируем переменные для тёмной темы */
   --header-text-color: #db00ff;
   --chapter-text-color: #ff0070;
@@ -19,5 +19,6 @@
   --main-text-color: #f1b2ce;
   --background-accent-text-color: #ff0070;
   --rec-visible: inherit;
+  --background-color: #000028;
   --background-image: url(../images/cover-image-dark.png);
 }

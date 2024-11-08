@@ -5,20 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Сложно сосредоточиться</title>
-    <meta name="color-scheme" content="dark light" />
-    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/dark.css" />
     <link rel="stylesheet" href="./styles/light.css" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
+    <meta name="color-scheme" content="dark light" />
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body class="page">
     <header class="header decorated-zone">
       <div>
         <p class="head__decoration">
           <span class="decoration__rec">REC</span
-          ><span class="decoration__point"></span>
+          ><span class="decoration__corner corner__top"></span>
         </p>
       </div>
       <nav class="header__theme-menu">
@@ -56,14 +56,14 @@
           Или почему нам так сложно сконцентрироваться, особенно когда очень
           надо
         </p>
-        <p class="bottom__decoration"></p>
+        <div class="decoration__corner corner__bottom"></div>
       </div>
     </header>
     <main>
       <section class="content container__why">
         <h2 class="chapter__text">Почему сосредоточиться так сложно</h2>
         <div class="chapter">
-          <div class="chapter_paragrapgh">
+          <article class="chapter_paragrapgh">
             <h3 class="accent__text">Многозадачность</h3>
             <p class="main__text">
               Особенно сложно сосредоточиться, когда задач много и все они —
@@ -73,6 +73,7 @@
               <a
                 href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7075496/"
                 class="text__link link__found"
+                target="_blank"
                 >выяснили</a
               >, что мозгу тяжело концентрироваться даже на двух делах
               одновременно. А когда в поле внимания попадает несколько важных
@@ -80,8 +81,8 @@
               «гормоны стресса». Из-за этого мы работаем невнимательно:
               ошибаемся и быстро устаём.
             </p>
-          </div>
-          <div class="chapter_paragrapgh">
+          </article>
+          <article class="chapter_paragrapgh">
             <h3 class="accent__text">Дофамин</h3>
             <p class="main__text">
               С гормонами стресса всё понятно, но дальше — ещё интереснее. В
@@ -93,13 +94,13 @@
               чувствуем удовольствие. Получается замкнутый круг: чем больше
               отвлекаешься, тем больше удовольствия получаешь.
             </p>
-          </div>
+          </article>
         </div>
       </section>
       <section class="content container__what">
         <h2 class="chapter__text">Что снижает концентрацию внимания?</h2>
         <div class="chapter chapter__what">
-          <div class="chapter_paragrapgh">
+          <article class="chapter_paragrapgh">
             <h3 class="accent__text">Многозадачность</h3>
             <p class="main__text">
               Как концентрация может снижаться из-за… концентрации? Любая
@@ -109,8 +110,8 @@
               собранными всё время — невозможно. Концентрация — мышца, и она
               может не выдержать, если не давать ей отдохнуть.
             </p>
-          </div>
-          <div class="chapter_paragrapgh">
+          </article>
+          <article class="chapter_paragrapgh">
             <h3 class="accent__text">Еда</h3>
             <p class="main__text">
               «Быстрые углеводы» — сахар, белый хлеб, сладости — молниеносно
@@ -120,8 +121,8 @@
               углеводов» заканчивается, мы чувствуем усталость и сонливость. И
               хотим ещё больше быстрых углеводов.
             </p>
-          </div>
-          <div class="chapter_paragrapgh">
+          </article>
+          <article class="chapter_paragrapgh">
             <h3 class="accent__text">Гаджеты</h3>
             <p class="main__text">
               Да-да, это та самая ситуация, когда на экране ноутбука — код, в
@@ -132,7 +133,7 @@
               Вот и получается, что чем больше времени мы проводим в гаджетах,
               тем больше времени затем нужно, чтобы вернуться к работе.
             </p>
-          </div>
+          </article>
         </div>
       </section>
       <section class="content container__how">
@@ -144,7 +145,7 @@
           <h3 class="accent__text">
             5 простых (на самом деле не очень) советов
           </h3>
-          <div class="chapter_paragrapgh">
+          <article class="chapter_paragrapgh">
             <h4 class="accent__text accent__weight">
               Представьте небо и облака
             </h4>
@@ -158,8 +159,8 @@
               вернуться в настоящий момент, а не волноваться о потенциальных
               проблемах из будущего.
             </p>
-          </div>
-          <div class="chapter_paragrapgh">
+          </article>
+          <article class="chapter_paragrapgh">
             <h4 class="accent__text accent__weight">Включите музыку</h4>
             <p class="main__text">
               Но не любую, и не любимую. Любимая может быть связана с сильными
@@ -167,14 +168,15 @@
               Подойдёт тихая, спокойная, умеренно-ритмичная. Можно вообще
               попробовать включить плейлист в «белым шумом» или нейромузыкой.
             </p>
-          </div>
-          <div class="chapter_paragrapgh">
+          </article>
+          <article class="chapter_paragrapgh">
             <h4 class="accent__text accent__weight">Прогуляйтесь</h4>
             <p class="main__text">
               Или даже пробегитесь. Лучше найти парк или лес: один эксперимент
               <a
                 href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328"
                 class="text__link link__show"
+                target="_blank"
                 >показал</a
               >, что созерцание природы повышает концентрацию, в то время как
               после просмотра городских пейзажей она наоборот понижается. Можно
@@ -182,8 +184,8 @@
               мозг поступит ещё больше кислорода и он будет лучше работать. Но и
               простая двадцатиминутная прогулка — тоже отличный вариант.
             </p>
-          </div>
-          <div class="chapter_paragrapgh">
+          </article>
+          <article class="chapter_paragrapgh">
             <h4 class="accent__text accent__weight">Хорошо ешьте</h4>
             <p class="main__text">
               Мы — не ваша бабушка, но это правда важно. Выбирайте продукты,
@@ -191,8 +193,8 @@
               высоким содержанием клетчатки: овощи, ягоды, бобовые (нут,
               чечевица, фасоль), коричневый рис, хлеб из цельнозерновой пшеницы.
             </p>
-          </div>
-          <div class="chapter_paragrapgh">
+          </article>
+          <article class="chapter_paragrapgh">
             <h4 class="accent__text accent__weight">Читайте</h4>
             <p class="main__text">
               Настоящие бумажные книги. Это правда помогает с концентрацией:
@@ -200,38 +202,54 @@
               даже секунд. А вот интересная книга способна затянуть и на
               несколько часов и круто тренирует направленное внимание.
             </p>
-          </div>
+          </article>
         </div>
       </section>
       <section class="content container__images">
         <h2 class="accent__text">А можно в картинках?</h2>
-        <div class="images">
-          <img
-            class="image beatiful__beach"
-            alt="Вдалеке солнце и горы, в небе птицы, снижу пляж и море"
-            src="./images/sunset.png"
-          />
-          <img
-            class="image taste__icecream"
-            alt="Огромная тарелка с мороженым"
-            src="./images/ice-cream.png"
-          />
-          <img
-            class="image cassete"
-            alt="Кассета на которую наведен курсор"
-            src="./images/tape.png"
-          />
-          <img class="image books" alt="Стопка книг" src="./images/books.png" />
-          <img
-            class="image tokio"
-            alt="Улица, посередине дорога, по бокам дома"
-            src="./images/street.png"
-          />
-        </div>
+        <ul class="images">
+          <li class="beatiful__beach">
+            <img
+              class="image"
+              alt="Вдалеке солнце и горы, в небе птицы, снижу пляж и море"
+              src="./images/sunset.png"
+            />
+          </li>
+          <li class="taste__icecream">
+            <img
+              class="image"
+              alt="Огромная тарелка с мороженым"
+              src="./images/ice-cream.png"
+            />
+          </li>
+          <li class="cassete">
+            <img
+              class="image"
+              alt="Кассета на которую наведен курсор"
+              src="./images/tape.png"
+            />
+          </li>
+          <li class="books">
+            <img
+              class="image books"
+              alt="Стопка книг"
+              src="./images/books.png"
+            />
+          </li>
+          <li class="tokio">
+            <img
+              class="image"
+              alt="Улица, посередине дорога, по бокам дома"
+              src="./images/street.png"
+            />
+          </li>
+        </ul>
       </section>
     </main>
     <footer class="footer">
+      <div class="decoration__corner corner__top"></div>
       <h2 class="text__footer">focus</h2>
+      <div class="decoration__corner corner__bottom"></div>
     </footer>
     <script src="./scripts/script.js"></script>
   </body>

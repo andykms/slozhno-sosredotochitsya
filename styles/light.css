@@ -19,6 +19,7 @@
   --accent-text-color: #353430;
   --main-text-color: #353430;
   --background-accent-text-color: #ff8dcb;
+  --background-color: #fff1f7;
   --background-image: url(../images/cover-image-light.png);
   --rec-visible: hidden;
 }
@@ -29,6 +30,7 @@
   :root {
     /* Дублируем переменные светлой темы */
     --header-text-color: #ffc2e6;
+    --background-color: #fff1f7;
     --chapter-text-color: #353430;
     --accent-text-color: #353430;
     --main-text-color: #353430;

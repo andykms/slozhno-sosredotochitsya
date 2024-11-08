@@ -2,7 +2,8 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  font-family: var(--main-font);
+  font-family: var(--main-font, monospace);
+  background-color: var(--background-color);
   background-image: var(--background-image);
   background-size: cover;
   background-position: center;
@@ -11,36 +12,52 @@
 
 .head__decoration {
   display: flex;
-  position: absolute;
-  top: var(--page-padding);
-  right: var(--page-padding);
+  position: relative;
+  inset-inline-end: 0;
+  padding-inline-end: calc(var(--page-padding) + var(--decoration-corner-size));
   color: var(--chapter-text-color);
   font-size: var(--text-size);
+  justify-content: end;
 }
 
 .decoration__rec {
+  position: absolute;
+  display: flex;
+  align-items: center;
   visibility: var(--rec-visible);
+  inset-block-start: var(--page-padding);
 }
 
-.decoration__point {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.decoration__corner {
+  position: absolute;
   block-size: var(--decoration-corner-size);
   inline-size: var(--decoration-corner-size);
-  border-block-start: 1px solid var(--chapter-text-color);
-  border-inline-end: 1px solid var(--chapter-text-color);
 }
 
-.decoration__point::after {
+.corner__top {
+  border-block-start: 1px solid var(--chapter-text-color);
+  border-inline-end: 1px solid var(--chapter-text-color);
+  inset-inline-end: var(--page-padding);
+  inset-block-start: var(--page-padding);
+}
+
+.corner__bottom {
+  border-block-end: 1px solid var(--chapter-text-color);
+  border-inline-start: 1px solid var(--chapter-text-color);
+  inset-inline-start: var(--page-padding);
+  inset-block-end: var(--page-padding);
+}
+
+.decoration__rec::after {
   content: '';
+  position: absolute;
   block-size: 9px;
   inline-size: 9px;
   background-color: var(--chapter-text-color);
   border-radius: 50%;
   box-shadow: 0 0 4px 2px var(--chapter-text-color);
   visibility: var(--rec-visible);
+  inset-inline-end: -16px;
 }
 
 .header__theme-menu-button_active {
@@ -53,15 +70,17 @@
   position: relative;
   grid-template-rows: var(--grid-rows);
   align-items: center;
+  block-size: minmax(--header-footer-block, 100vh);
   margin-block-end: var(--header-footer-block-end);
 }
 
 .header__theme-menu {
   justify-self: end;
-  padding: var(--page-padding) var(--page-padding) 0 var(--page-padding);
+  padding: 0 var(--page-padding) 0 var(--page-padding);
 }
 
 .header__theme-menu-list {
+  padding-block-start: var(--page-padding);
   display: flex;
   flex-direction: column;
   gap: var(--mini-gap);
@@ -140,17 +159,6 @@
   inline-size: var(--about-width);
 }
 
-.header::after {
-  content: '';
-  position: absolute;
-  bottom: var(--page-padding);
-  left: var(--page-padding);
-  block-size: var(--decoration-corner-size);
-  inline-size: var(--decoration-corner-size);
-  border-inline-start: 1px solid var(--chapter-text-color);
-  border-block-end: 1px solid var(--chapter-text-color);
-}
-
 .content {
   padding-inline: var(--page-padding) var(--page-padding);
   padding-block-end: var(--content-padding);
@@ -160,9 +168,7 @@
   padding-block-end: var(--header-footer-block-end);
 }
 
-.container__why,
-.container__what,
-.container__how {
+.content {
   flex-direction: column;
   display: flex;
   gap: var(--large-gap);
@@ -319,27 +325,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-block-size: var(--footer-block-size);
-}
-
-.text__footer::after,
-.footer::before {
-  content: '';
-  position: absolute;
-  block-size: var(--decoration-corner-size);
-  inline-size: var(--decoration-corner-size);
-}
-
-.footer::before {
-  inset-block-start: var(--page-padding);
-  inset-inline-end: var(--page-padding);
-  border-inline-end: 1px solid var(--chapter-text-color);
-  border-block-start: 1px solid var(--chapter-text-color);
-}
-
-.text__footer::after {
-  inset-block-end: var(--page-padding);
-  inset-inline-start: var(--page-padding);
-  border-inline-start: 1px solid var(--chapter-text-color);
-  border-block-end: 1px solid var(--chapter-text-color);
+  min-block-size: var(--header-footer-block);
+  block-size: 100vh;
 }
