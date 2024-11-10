@@ -159,6 +159,12 @@
   inline-size: var(--about-width);
 }
 
+@media (min-width: 1024px) {
+  .about__header {
+    padding-block-end: 0;
+  }
+}
+
 .content {
   flex-direction: column;
   display: flex;

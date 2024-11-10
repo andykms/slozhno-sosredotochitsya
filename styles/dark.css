@@ -18,7 +18,7 @@
   --accent-text-color: #000028;
   --main-text-color: #f1b2ce;
   --background-accent-text-color: #ff0070;
-  --rec-visible: inherit;
+  --rec-visible: visibility;
   --background-color: #000028;
   --background-image: url(../images/cover-image-dark.png);
 }
